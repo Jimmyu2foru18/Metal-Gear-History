@@ -247,7 +247,7 @@ a, button, select, input, .timeline__node, .knowledge-card {
 /* ========== TIMELINE ========== */
 .timeline {
   position: relative;
-  padding: 2rem 0 4rem;
+  padding: 2rem 0 2rem;
   scroll-snap-type: y proximity;
 }
 
@@ -270,6 +270,10 @@ a, button, select, input, .timeline__node, .knowledge-card {
   display: flex;
   flex-direction: column;
   gap: 6rem;
+}
+
+.timeline__node:last-child {
+  margin-bottom: 6rem;
 }
 
 /* ========== TIMELINE NODE ========== */
@@ -953,6 +957,13 @@ a, button, select, input, .timeline__node, .knowledge-card {
 .game-nav__link:hover {
   border-color: var(--hud-green);
   color: var(--hud-green);
+  box-shadow: 0 0 10px var(--hud-green-dim);
+}
+
+.game-nav__link--active {
+  border-color: var(--hud-green);
+  color: var(--hud-green);
+  background: var(--hud-green-dim);
   box-shadow: 0 0 10px var(--hud-green-dim);
 }
 

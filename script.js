@@ -25,7 +25,7 @@ const timelineData = [
     source: "Case study derived from Metal Gear Solid 3: Snake Eater (2004), Metal Gear Solid: Portable Ops (2006), Metal Gear Solid: Peace Walker (2010), and The Phantom Pain (2015).",
     citation: "VERIFIED // MGS3_INTEL_002 // KJP_ARCHIVE_1975 // LET_PROJECT_FILES",
     tags: ["Origins", "Naked Snake", "Big Boss"],
-    image: "https://placehold.co/800x400/0a0e0f/3a5f0b?text=NACKED+SNAKE+1934"
+    image: "https://placehold.co/800x400/0a0e0f/3a5f0b?text=NAKED+SNAKE+1934"
   },
   {
     id: 3,
@@ -385,6 +385,32 @@ function renderTimeline(data) {
       node.classList.add('is-visible');
     });
   }, 200);
+}
+
+// ========== INTERSECTION OBSERVER ==========
+function observeNodes() {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.timeline__node').forEach(node => {
+      node.classList.add('is-visible');
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  document.querySelectorAll('.timeline__node').forEach(node => {
+    observer.observe(node);
+  });
 }
 
 // ========== RENDER STRATEGIC OVERVIEW ==========
