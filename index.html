@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A high-end, interactive timeline documenting the chronological history of the Metal Gear Solid universe.">
+    <title>Metal Gear Solid — Canonical Timeline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+    <div class="vignette"></div>
+
+    <header class="hud-header" role="banner">
+        <div class="hud-header__corner hud-header__corner--tl"></div>
+        <div class="hud-header__corner hud-header__corner--tr"></div>
+        <div class="hud-header__corner hud-header__corner--bl"></div>
+        <div class="hud-header__corner hud-header__corner--br"></div>
+        <div class="hud-header__content">
+            <h1 class="hud-header__title" data-text="METAL GEAR SOLID">METAL GEAR SOLID</h1>
+            <p class="hud-header__subtitle">CANONICAL TIMELINE // CLASSIFIED</p>
+            <div class="hud-header__status">
+                <span class="status-dot"></span>
+                <span class="status-text">SECURE CONNECTION ESTABLISHED</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="filter-bar" role="navigation" aria-label="Timeline filters">
+        <div class="filter-bar__group filter-bar__group--view">
+            <button class="view-btn view-btn--active" data-view="timeline" type="button">TIMELINE VIEW</button>
+            <button class="view-btn" data-view="strategic" type="button">STRATEGIC OVERVIEW</button>
+        </div>
+        <div class="filter-bar__group">
+            <label class="filter-bar__label" for="era-filter">ERA</label>
+            <select id="era-filter" class="hud-select">
+                <option value="all">All Eras</option>
+            </select>
+        </div>
+        <div class="filter-bar__group">
+            <label class="filter-bar__label" for="protagonist-filter">PROTAGONIST</label>
+            <select id="protagonist-filter" class="hud-select">
+                <option value="all">All Operatives</option>
+            </select>
+        </div>
+        <div class="filter-bar__group">
+            <label class="filter-bar__label" for="conflict-filter">CONFLICT</label>
+            <select id="conflict-filter" class="hud-select">
+                <option value="all">All Conflicts</option>
+            </select>
+        </div>
+        <div class="filter-bar__group filter-bar__group--search">
+            <input type="text" id="search-input" class="hud-input" placeholder="SEARCH ARCHIVES..." aria-label="Search timeline">
+        </div>
+    </nav>
+
+    <main id="timeline-container" class="timeline" role="main">
+        <div id="timeline-view">
+            <div class="timeline__rail" aria-hidden="true"></div>
+            <div id="timeline-nodes" class="timeline__nodes"></div>
+        </div>
+        <div id="strategic-view" class="strategic-view" hidden>
+            <div id="strategic-content" class="strategic-content"></div>
+        </div>
+    </main>
+
+    <footer class="hud-footer" role="contentinfo">
+        <div class="hud-footer__content">
+            <p class="hud-footer__text">MIT LICENSE // BUILT BY FANS, FOR FANS</p>
+            <p class="hud-footer__text">TOTAL ARCHIVED EVENTS: <span id="event-count">0</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
