@@ -1,6 +1,6 @@
 # Metal Gear Solid — Canonical Timeline
 
-> A high-end, interactive web experience documenting the chronological history of the Metal Gear Solid universe.
+> A interactive web app documenting the chronological history of the Metal Gear Solid universe.
 
 ---
 
