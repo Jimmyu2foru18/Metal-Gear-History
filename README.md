@@ -1,6 +1,6 @@
 # Metal Gear Solid — Canonical Timeline
 
-> A high-end, interactive web experience documenting the chronological history of the Metal Gear Solid universe.
+> A interactive web app documenting the chronological history of the Metal Gear Solid universe.
 
 ---
 
@@ -68,37 +68,6 @@ The timeline is organized by **in-universe years**, allowing users to traverse d
   - HUD Green: `#00ff41` (CRT terminal)
 - **Textures**: Subtle noise grain, scanline overlays, and vignette effects rendered via CSS pseudo-elements and SVG filters.
 - **Motion Principles**: Every scroll action should feel physical—heavy, grounded, but precise. Transitions are never purely decorative; they reinforce the "classified briefing" narrative.
-
----
-
-## Roadmap
-
-### Phase 1 — Foundation (Weeks 1–3)
-- [ ] Initialize Next.js project with TypeScript and Tailwind CSS.
-- [ ] Define core data schema for timeline entries (year, era, title, summary, image, tags).
-- [ ] Build static timeline scaffold with placeholder content for the first 3 eras.
-- [ ] Implement base layout: HUD header, timeline rail, knowledge cards.
-- [ ] Add CSS noise texture and scanline overlay.
-
-### Phase 2 — Motion & Interaction (Weeks 4–6)
-- [ ] Integrate Framer Motion + GSAP ScrollTrigger.
-- [ ] Build parallax background system (layered PNG/WebP assets).
-- [ ] Implement intersection-observer fade-ins for timeline nodes.
-- [ ] Develop glitch effect CSS module for titles and dividers.
-- [ ] Add smooth scroll snapping between major eras.
-
-### Phase 3 — Polish & Content (Weeks 7–9)
-- [ ] Connect Headless CMS (Sanity) for content management.
-- [ ] Migrate placeholder content to CMS and write 10–15 canonical entries.
-- [ ] Optimize images via Cloudinary / Next Image; implement lazy loading.
-- [ ] Add audio layer: ambient radio static toggle with Web Audio API.
-- [ ] Conduct cross-browser and mobile responsive QA.
-
-### Phase 4 — Launch & Iteration (Week 10+)
-- [ ] Deploy to Vercel with preview branch environment.
-- [ ] Run Lighthouse audits; target 90+ Performance and Accessibility.
-- [ ] Add interactive features: era filters, shareable deep links, bookmarks.
-- [ ] Community contribution guide for lore corrections and image submissions.
 
 ---
 
