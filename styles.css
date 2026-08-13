@@ -28,7 +28,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-body);
@@ -248,7 +247,6 @@ a, button, select, input, .timeline__node, .knowledge-card {
 .timeline {
   position: relative;
   padding: 2rem 0 2rem;
-  scroll-snap-type: y proximity;
 }
 
 .timeline__rail {
@@ -286,7 +284,6 @@ a, button, select, input, .timeline__node, .knowledge-card {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
-  scroll-snap-align: start;
 }
 
 .timeline__node.is-visible {
