@@ -71,35 +71,4 @@ The timeline is organized by **in-universe years**, allowing users to traverse d
 
 ---
 
-## Roadmap
-
-### Phase 1 — Foundation (Weeks 1–3)
-- [ ] Initialize Next.js project with TypeScript and Tailwind CSS.
-- [ ] Define core data schema for timeline entries (year, era, title, summary, image, tags).
-- [ ] Build static timeline scaffold with placeholder content for the first 3 eras.
-- [ ] Implement base layout: HUD header, timeline rail, knowledge cards.
-- [ ] Add CSS noise texture and scanline overlay.
-
-### Phase 2 — Motion & Interaction (Weeks 4–6)
-- [ ] Integrate Framer Motion + GSAP ScrollTrigger.
-- [ ] Build parallax background system (layered PNG/WebP assets).
-- [ ] Implement intersection-observer fade-ins for timeline nodes.
-- [ ] Develop glitch effect CSS module for titles and dividers.
-- [ ] Add smooth scroll snapping between major eras.
-
-### Phase 3 — Polish & Content (Weeks 7–9)
-- [ ] Connect Headless CMS (Sanity) for content management.
-- [ ] Migrate placeholder content to CMS and write 10–15 canonical entries.
-- [ ] Optimize images via Cloudinary / Next Image; implement lazy loading.
-- [ ] Add audio layer: ambient radio static toggle with Web Audio API.
-- [ ] Conduct cross-browser and mobile responsive QA.
-
-### Phase 4 — Launch & Iteration (Week 10+)
-- [ ] Deploy to Vercel with preview branch environment.
-- [ ] Run Lighthouse audits; target 90+ Performance and Accessibility.
-- [ ] Add interactive features: era filters, shareable deep links, bookmarks.
-- [ ] Community contribution guide for lore corrections and image submissions.
-
----
-
 *"Snake? Snake?! SNAKE!!!"*
