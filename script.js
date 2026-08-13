@@ -275,12 +275,12 @@ function switchView(view) {
   const strategicView = document.getElementById('strategic-view');
   
   if (view === 'timeline') {
-    timelineView.style.display = 'block';
-    strategicView.style.display = 'none';
+    timelineView.hidden = false;
+    strategicView.hidden = true;
     renderTimeline(timelineData);
   } else {
-    timelineView.style.display = 'none';
-    strategicView.style.display = 'block';
+    timelineView.hidden = true;
+    strategicView.hidden = false;
     renderStrategicOverview();
   }
 }
@@ -379,6 +379,12 @@ function renderTimeline(data) {
 
   observeNodes();
   initDossierToggles();
+  
+  setTimeout(() => {
+    document.querySelectorAll('.timeline__node:not(.is-visible)').forEach(node => {
+      node.classList.add('is-visible');
+    });
+  }, 200);
 }
 
 // ========== RENDER STRATEGIC OVERVIEW ==========
